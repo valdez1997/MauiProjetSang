@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProjetSang.View.FaqPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Shell.BackgroundColor="#ec1b23"
+             Title="FaqPage">
+    <ScrollView>
+        <VerticalStackLayout Spacing="25"
+                             Padding="15,0"
+                             VerticalOptions="Center">
+            <Label Padding="0,10" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" Text="Quelques questions au sujet du don de sang" TextColor="#ec1b23"/>
+            <toolkit:Expander x:Name="MyExpander" IsExpanded="False">
+                <toolkit:Expander.Header>
+                    <Grid ColumnDefinitions="*" HeightRequest="55">
+                        <Grid.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontAttributes" Value="Bold"/>
+                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                            </Style>
+                        </Grid.Resources>
+
+                        <Border Padding="5" >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Puis-je donner du sang avant mes 18 ans ?" HorizontalOptions="StartAndExpand"/>
+                                <Image HeightRequest="20" WidthRequest="25" >
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference MyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechehaut"/>
+
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference MyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechebas"/>
+
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </StackLayout>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16"/>
+                            </Border.StrokeShape>
+                        </Border>
+                    </Grid>
+                </toolkit:Expander.Header>
+
+                <toolkit:Expander.Content>
+                    <Frame Margin="5" BorderColor="#ec1b23" CornerRadius="16">
+
+                        <Label FontSize="20" Text="Non.
+L’âge règlementaire minimum pour donner son sang est 18 ans." TextColor="Black"/>
+                         
+                    </Frame>
+                </toolkit:Expander.Content>
+
+            </toolkit:Expander>
+            <toolkit:Expander x:Name="MLyExpander" IsExpanded="False">
+                <toolkit:Expander.Header>
+                    <Grid ColumnDefinitions="*" HeightRequest="55">
+                        <Grid.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontAttributes" Value="Bold"/>
+                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                            </Style>
+                        </Grid.Resources>
+
+                        <Border Padding="5" BackgroundColor="White">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Est-ce dangereux pour la santé de donner son sang ? " HorizontalOptions="StartAndExpand"/>
+                                <Image HeightRequest="20" WidthRequest="25" >
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference MLyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechehaut"/>
+
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference MLyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechebas"/>
+
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </StackLayout>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16"/>
+                            </Border.StrokeShape>
+                        </Border>
+                    </Grid>
+                </toolkit:Expander.Header>
+
+                <toolkit:Expander.Content>
+                    <Frame Margin="5" BorderColor="#ec1b23" CornerRadius="16">
+
+                        <Label FontSize="20" Text="Non
+Le don de sang n’a aucune répercussion sur une personne en bonne santé. Le plasma et les plaquettes se régénèrent automatiquement dans les heures suivant le don. Pour les globules rouges, une quinzaine de jours est nécessaire. Il est donc nécessaire de respecter un délai d’au moins 8 semaines entre deux dons de sang total." TextColor="Black"/>
+                         
+                    </Frame>
+                </toolkit:Expander.Content>
+
+            </toolkit:Expander>
+
+            <toolkit:Expander x:Name="LyExpander" IsExpanded="False">
+                <toolkit:Expander.Header>
+                    <Grid ColumnDefinitions="*" HeightRequest="55">
+                        <Grid.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontAttributes" Value="Bold"/>
+                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                            </Style>
+                        </Grid.Resources>
+
+                        <Border Padding="5" BackgroundColor="White">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Quelle est la quantité de sang prélevée lors d’un don ?" HorizontalOptions="StartAndExpand"/>
+                                <Image HeightRequest="20" WidthRequest="25" >
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference LyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechehaut"/>
+
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference LyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechebas"/>
+
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </StackLayout>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16"/>
+                            </Border.StrokeShape>
+                        </Border>
+                    </Grid>
+                </toolkit:Expander.Header>
+
+                <toolkit:Expander.Content>
+                    <Frame Margin="5" BorderColor="#ec1b23" CornerRadius="16">
+
+                        <Label FontSize="20" Text="Entre 400 et 480 ml
+Par mesure de précaution, on ne peut pas prélever plus de 8 ml/kg, c’est pourquoi le donneur doit peser au moins 50 kg. Pour information, un homme de 70 kg possède environ 5 litres de sang." TextColor="Black"/>
+                                
+                            
+                    </Frame>
+                </toolkit:Expander.Content>
+
+            </toolkit:Expander>
+
+            <toolkit:Expander x:Name="MyeExpander" IsExpanded="False">
+                <toolkit:Expander.Header>
+                    <Grid ColumnDefinitions="*" HeightRequest="55">
+                        <Grid.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontAttributes" Value="Bold"/>
+                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                            </Style>
+                        </Grid.Resources>
+
+                        <Border Padding="5" >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Puis-je donner mon sang dès le lendemain d’un don ? " HorizontalOptions="StartAndExpand"/>
+                                <Image HeightRequest="20" WidthRequest="25" >
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference MyeExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechehaut"/>
+
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference MyeExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechebas"/>
+
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </StackLayout>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16"/>
+                            </Border.StrokeShape>
+                        </Border>
+                    </Grid>
+                </toolkit:Expander.Header>
+
+                <toolkit:Expander.Content>
+                    <Frame Margin="5" BorderColor="#ec1b23" CornerRadius="16">
+
+                        <Label FontSize="20" Text="Non : le délai entre deux dons varie en fonction du type de don de sang.
+Il faut attendre 8 semaines minimum entre deux dons de sang total. On peut donner ses plaquettes jusqu’à 12 fois par an, à 4 semaines d’intervalle minimum, et son plasma jusqu’à 24 fois, à 2 semaines d’intervalle minimum." TextColor="Black"/>
+
+                    </Frame>
+                </toolkit:Expander.Content>
+
+            </toolkit:Expander>
+
+            <toolkit:Expander x:Name="MyeeExpander" IsExpanded="False">
+                <toolkit:Expander.Header>
+                    <Grid ColumnDefinitions="*" HeightRequest="55">
+                        <Grid.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontAttributes" Value="Bold"/>
+                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                            </Style>
+                        </Grid.Resources> 
+
+                        <Border Padding="5" >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Puis-je donner si je viens d’être malade (rhume, gastro-entérite) ?" HorizontalOptions="StartAndExpand"/>
+                                <Image HeightRequest="20" WidthRequest="25" >
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference MyeeExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechehaut"/>
+
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference MyeeExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechebas"/>
+
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </StackLayout>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16"/>
+                            </Border.StrokeShape>
+                        </Border>
+                    </Grid>
+                </toolkit:Expander.Header>
+
+                <toolkit:Expander.Content>
+                    <Frame Margin="5" BorderColor="#ec1b23" CornerRadius="16">
+
+                        <Label FontSize="20" Text="Non, pas dans l’immédiat.
+Il faut attendre 15 jours après la disparition des symptômes pour donner son sang." TextColor="Black"/>
+
+                    </Frame>
+                </toolkit:Expander.Content>
+
+            </toolkit:Expander>
+
+            <toolkit:Expander x:Name="TyExpander" IsExpanded="False">
+                <toolkit:Expander.Header>
+                    <Grid ColumnDefinitions="*" HeightRequest="55">
+                        <Grid.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontAttributes" Value="Bold"/>
+                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                            </Style>
+                        </Grid.Resources>
+
+                        <Border Padding="5" >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Puis-je donner si je prends un traitement médical ? " HorizontalOptions="StartAndExpand"/>
+                                <Image HeightRequest="20" WidthRequest="25" >
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference TyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechehaut"/>
+
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference TyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechebas"/>
+
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </StackLayout>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16"/>
+                            </Border.StrokeShape>
+                        </Border>
+                    </Grid>
+                </toolkit:Expander.Header>
+
+                <toolkit:Expander.Content>
+                    <Frame Margin="5" BorderColor="#ec1b23" CornerRadius="16">
+
+                        <Label FontSize="20" Text="Cela dépend du traitement.
+À la suite d’un traitement par antibiotiques, il faut attendre 14 jours. Pour les autres médicaments, la contre-indication est souvent liée à la pathologie et non au traitement lui-même. Un médecin décidera de votre aptitude le jour du don." TextColor="Black"/>
+
+                    </Frame>
+                </toolkit:Expander.Content>
+
+            </toolkit:Expander>
+
+            <toolkit:Expander x:Name="VyExpander" IsExpanded="False">
+                <toolkit:Expander.Header>
+                    <Grid ColumnDefinitions="*" HeightRequest="55">
+                        <Grid.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontAttributes" Value="Bold"/>
+                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                            </Style>
+                        </Grid.Resources>
+
+                        <Border Padding="5" >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Puis-je donner si je suis diabétique ? " HorizontalOptions="StartAndExpand"/>
+                                <Image HeightRequest="20" WidthRequest="25" >
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference VyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechehaut"/>
+
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference VyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechebas"/>
+
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </StackLayout>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16"/>
+                            </Border.StrokeShape>
+                        </Border>
+                    </Grid>
+                </toolkit:Expander.Header>
+
+                <toolkit:Expander.Content>
+                    <Frame Margin="5" BorderColor="#ec1b23" CornerRadius="16">
+
+                        <Label FontSize="20" Text="La réponse diffère en fonction du type de diabète.
+Les diabétiques ayant un traitement par insuline ne peuvent pas donner leur sang." TextColor="Black"/>
+
+                    </Frame>
+                </toolkit:Expander.Content>
+
+            </toolkit:Expander>
+
+            <toolkit:Expander x:Name="AyExpander" IsExpanded="False">
+                <toolkit:Expander.Header>
+                    <Grid ColumnDefinitions="*" HeightRequest="55">
+                        <Grid.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontAttributes" Value="Bold"/>
+                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                            </Style>
+                        </Grid.Resources>
+
+                        <Border Padding="5" >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Puis-je donner si je suis enceinte ou si je viens d’accoucher ?" HorizontalOptions="StartAndExpand"/>
+                                <Image HeightRequest="20" WidthRequest="25" >
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference AyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechehaut"/>
+
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference AyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechebas"/>
+
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </StackLayout>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16"/>
+                            </Border.StrokeShape>
+                        </Border>
+                    </Grid>
+                </toolkit:Expander.Header>
+
+                <toolkit:Expander.Content>
+                    <Frame Margin="5" BorderColor="#ec1b23" CornerRadius="16">
+
+                        <Label FontSize="20" Text="Non
+Afin d’éviter tout risque de carence, les femmes enceintes ne peuvent pas donner leur sang. Et elles doivent respecter un délai de 6 mois après l’accouchement, surtout si elles allaitent." TextColor="Black"/>
+
+                    </Frame>
+                </toolkit:Expander.Content>
+
+            </toolkit:Expander>
+
+            <toolkit:Expander x:Name="ByExpander" IsExpanded="False">
+                <toolkit:Expander.Header>
+                    <Grid ColumnDefinitions="*" HeightRequest="55">
+                        <Grid.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontAttributes" Value="Bold"/>
+                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                            </Style>
+                        </Grid.Resources>
+
+                        <Border Padding="5" >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Puis-je donner si j’ai déjà été transfusé ? "/>
+                                <Image HeightRequest="20" WidthRequest="25" HorizontalOptions="EndAndExpand">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference ByExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechehaut"/>
+
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference ByExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechebas"/>
+
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </StackLayout>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16"/>
+                            </Border.StrokeShape>
+                        </Border>
+                    </Grid>
+                </toolkit:Expander.Header>
+
+                <toolkit:Expander.Content>
+                    <Frame Margin="5" BorderColor="#ec1b23" CornerRadius="16">
+
+                        <Label FontSize="20" Text="Non
+Par mesure de sécurité, le don de sang n’est pas possible pour les personnes qui ont déjà été transfusées. Il s’agit d’une contre-indication définitive." TextColor="Black"/>
+
+                    </Frame>
+                </toolkit:Expander.Content>
+
+            </toolkit:Expander>
+
+            <toolkit:Expander x:Name="CyExpander" IsExpanded="False">
+                <toolkit:Expander.Header>
+                    <Grid ColumnDefinitions="*" HeightRequest="55">
+                        <Grid.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontAttributes" Value="Bold"/>
+                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                            </Style>
+                        </Grid.Resources>
+
+                        <Border Padding="5" >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Puis-je donner si je consomme des stupéfiants ?" HorizontalOptions="StartAndExpand"/>
+                                <Image HeightRequest="20" WidthRequest="25" >
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference CyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechehaut"/>
+
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Image"
+                                                     Binding="{Binding Source={x:Reference CyExpander},Path=IsExpanded}"
+                                                     Value="True">
+                                            <Setter Property="Source" Value="flechebas"/>
+
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                            </StackLayout>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="16"/>
+                            </Border.StrokeShape>
+                        </Border>
+                    </Grid>
+                </toolkit:Expander.Header>
+
+                <toolkit:Expander.Content>
+                    <Frame Margin="5" BorderColor="#ec1b23" CornerRadius="16">
+
+                        <Label FontSize="20" Text="Cela dépend surtout du mode d’administration.
+Tout antécédent d’injection par voie intraveineuse représente un risque de contamination infectieuse et constitue une contre-indication permanente au don de sang. En cas de consommation de cannabis, il faut attendre au moins 48 heures avant le don." TextColor="Black"/>
+
+                    </Frame>
+                </toolkit:Expander.Content>
+
+            </toolkit:Expander>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

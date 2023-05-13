@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiProjetSang.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiProjetSang.View"
+    >
+
+    <ShellContent
+        FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <FlyoutItem
+        Title="Home"
+        Icon="hotel">
+        <Tab
+            Title="Accueil"
+            Icon="hotel">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:StartPage}"
+                Route="Home" />
+        </Tab>
+        <Tab
+            Title="Articles"
+            Icon="article">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:ArticlesPage}"
+                Route="Articles" />
+        </Tab>
+        <Tab
+            Title="Pre-dons"
+            Icon="eye">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:TestdePredonPage}"
+                Route="Predons" />
+        </Tab>
+        <Tab
+            Title="Profil"
+            Icon="utilisateur">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:ProfilPage}"
+                Route="Profile" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem
+        Title="Mes Rendez-vous"
+        Icon="rdv.png">
+        <ShellContent
+            Route="RendezVous"
+            ContentTemplate="{DataTemplate local:RdvPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem
+        Title="Tests de pre-dons"
+        Icon="eye">
+        <ShellContent
+            Route="Predons"
+            ContentTemplate="{DataTemplate local:TestdePredonPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem
+        Title="Modifier le mot de passe"
+        Icon="cle">
+        <ShellContent
+            Route="EditPassword"
+            ContentTemplate="{DataTemplate local:EditPasswordPage}"/>
+    </FlyoutItem>
+    <FlyoutItem
+        Title="Parametres"
+        Icon="cle">
+        <ShellContent
+            Route="Parameter"
+            ContentTemplate="{DataTemplate local:ParameterPage}"/>
+    </FlyoutItem>
+    <FlyoutItem
+        Title="A propos"
+        Icon="cle">
+        <ShellContent
+            Route="apropos"
+            ContentTemplate="{DataTemplate local:ApropoPage}"/>
+    </FlyoutItem>
+
+
+    <Shell.FlyoutHeader >
+        <VerticalStackLayout>
+            <Frame Margin="5,5" HorizontalOptions="Center" CornerRadius="150" HeightRequest="150" WidthRequest="150">
+                <Image Source="utilisateur"/>
+            </Frame>
+            
+
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+</Shell>

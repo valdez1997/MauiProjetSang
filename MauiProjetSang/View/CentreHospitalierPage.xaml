@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProjetSang.View.CentreHospitalierPage"
+             xmlns:model="clr-namespace:MauiProjetSang.Model"
+             xmlns:viewmodel="clr-namespace:MauiProjetSang.ViewModel"
+             x:DataType="viewmodel:CenterHospitalierViewModel"
+             Shell.BackgroundColor="#ec1b23"
+             Title="CentreHospitalierPage">
+    <RefreshView 
+               Command="{Binding GetHospitalCommand}"
+                     IsRefreshing="{Binding IsRefreshing}">
+        <ScrollView>
+            <VerticalStackLayout Margin="10">
+
+                <CollectionView ItemsSource="{Binding Hospitals}"
+                                SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="{x:Type model:Hospital}">
+                            <VerticalStackLayout Padding="5">
+
+                                <Frame HasShadow="True"
+                                       Margin="05"
+                                       BorderColor="#ec1b23">
+
+                                    <VerticalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Frame Margin="05"
+                                   HorizontalOptions="Start" 
+                                   BackgroundColor="#ec1b23"
+                                   CornerRadius="40"
+                                   BorderColor="#ec1b23" WidthRequest="40"
+                                   HeightRequest="40">
+                                                <ImageButton 
+                                                    Source="logo4.png"
+                                                    HeightRequest="60"
+                                                    WidthRequest="60" />
+                                            </Frame>
+                                            <Label Text="{Binding title}" 
+                                                   VerticalOptions="Center"
+                                                   FontAttributes="Bold"
+                                                   FontSize="18"/>
+                                        </HorizontalStackLayout>
+                                        <VerticalStackLayout >
+                                            <Grid>
+                                                <Image Source="{Binding logo}" 
+                                                       Aspect="AspectFit" />
+
+                                            </Grid>
+                                            <Label Text="{Binding town}"
+                                                   HorizontalOptions="Center"
+                                                   Padding="5,15"/>
+                                        </VerticalStackLayout>
+                                        <Button WidthRequest="150" 
+                                                FontAttributes="Bold"
+                                                Text="Prendre rdv"
+                                                CornerRadius="30"
+                                                BackgroundColor="#ec1b23">
+                                            <Button.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                            </Button.GestureRecognizers>
+                                        </Button>
+                                    </VerticalStackLayout>
+                                </Frame>
+
+                            </VerticalStackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+
+        </ScrollView>
+    </RefreshView>
+</ContentPage>

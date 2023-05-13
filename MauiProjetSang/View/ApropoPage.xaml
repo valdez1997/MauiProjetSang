@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProjetSang.View.ApropoPage"
+             Shell.BackgroundColor="#ec1b23"
+             Title="ApropoPage">
+    <VerticalStackLayout Spacing="20">
+        <Frame HasShadow="True"
+               HeightRequest="150"
+               WidthRequest="150"
+               CornerRadius="100"
+               Margin="0,20,0,50" BorderColor="#ec1b23">
+            <Image Source="logo2.png"   Aspect="AspectFit"  />
+        </Frame>
+        <Label Margin="0,10,0,10">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="    Blood Donation" TextColor="#ec1b23" FontSize="20"/>
+                    <Span FontSize="20" Text=" est une plateforme numerique qui facilite les hopitaux dans l'acquisition du sang.
+                          " />
+
+
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label   Text="   Elle est née d'un sentiment d'impuissance qui a envahi une famille Camerounaise 
+lorsqu'elle a été confrontée au besoin et à l'urgence de trouver de devoir trouver du sang
+pour sauver la vie d'un proche en attente de transfusion sanguine." FontAttributes="Bold" FontSize="18"/>
+    </VerticalStackLayout>
+</ContentPage>
