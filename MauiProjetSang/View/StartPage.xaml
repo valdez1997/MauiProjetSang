@@ -16,7 +16,7 @@
             <VerticalStackLayout
                 Spacing="5">
                 <ImageButton
-                    Source="dotnet_bot"
+                    Source="hopitals"
                     HeightRequest="90"
                     CornerRadius="10"
                     Command="{Binding CardTapCommand}"
@@ -34,7 +34,7 @@
                 Grid.Column="1"
                 Spacing="5">
                 <ImageButton
-                    Source="dotnet_bot"
+                    Source="new"
                     HeightRequest="90"
                     CornerRadius="10"
                     Command="{Binding CardTapCommand}"
@@ -52,7 +52,7 @@
                 Grid.Column="2"
                 Spacing="5">
                 <ImageButton
-                    Source="dotnet_bot"
+                    Source="rendezvous"
                     HeightRequest="90"
                     CornerRadius="10"
                     Command="{Binding CardTapCommand}"

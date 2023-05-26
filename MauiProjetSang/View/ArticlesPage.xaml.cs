@@ -20,4 +20,18 @@ public partial class ArticlesPage : ContentPage
 		}
         base.OnAppearing();
     }
+
+    private void Entry_TextChanged(object sender, TextChangedEventArgs e)
+    {
+		if (string.IsNullOrWhiteSpace(e.NewTextValue))
+		{
+			ArticleName.ItemsSource = articleViewModel.Article;
+
+        }
+		else
+		{
+			ArticleName.ItemsSource = articleViewModel.Article.Where(Articles => Articles.title.ToLower().Contains(e.NewTextValue.ToLower()));
+        }
+
+    }
 }

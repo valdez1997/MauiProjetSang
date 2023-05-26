@@ -8,10 +8,16 @@
              Shell.BackgroundColor="#ec1b23"
              Title="ArticlesPage">
     <Grid ColumnDefinitions="*,*"
-              RowDefinitions="*,Auto" 
+              RowDefinitions="Auto,*,Auto" 
               ColumnSpacing="5"
               >
+        <Entry Grid.ColumnSpan="2"
+               Grid.Row="0"
+               Placeholder="Search"
+               TextChanged="Entry_TextChanged" 
+               Margin="10"/>
         <RefreshView Grid.ColumnSpan="2" 
+                     Grid.Row="1"
                       Command="{Binding GetArticleCommand}"
                      IsRefreshing="{Binding IsRefreshing}">
             <CollectionView 
@@ -34,14 +40,24 @@
                                    CornerRadius="40"
                                    BorderColor="#ec1b23" WidthRequest="40"
                                    HeightRequest="40">
-                                        <ImageButton  Source="logo4.png" HeightRequest="60" WidthRequest="60" />
+                                        <ImageButton  Source="logo4.png"
+                                                      HeightRequest="60"
+                                                      WidthRequest="60" />
                                     </Frame>
-                                    <Label Text="Blood Donation" VerticalOptions="Center" FontAttributes="Bold"/>
+                                    <Label Text="Blood Donation" 
+                                           VerticalOptions="Center"
+                                           FontAttributes="Bold"/>
                                 </HorizontalStackLayout>
                                 <VerticalStackLayout >
                                     <Grid>
                                         <Image Source="{Binding image}" Aspect="AspectFit" />
-                                        <Frame Padding="10" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="#ec1b23" HasShadow="True" BorderColor="#ec1b23" HeightRequest="35" WidthRequest="110">
+                                        <Frame Padding="10"
+                                               HorizontalOptions="EndAndExpand"
+                                               VerticalOptions="StartAndExpand"
+                                               BackgroundColor="#ec1b23" 
+                                               HasShadow="True"
+                                               BorderColor="#ec1b23" 
+                                               HeightRequest="35" WidthRequest="110">
                                             <Label  Text="{Binding created_at}" FontSize="12" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center"   />
                                         </Frame>
                                     </Grid>
@@ -59,6 +75,7 @@
                                VerticalOptions="CenterAndExpand"
                            Grid.ColumnSpan="2"
                            Grid.RowSpan="2"/>
+        
     </Grid>
 
 </ContentPage>
