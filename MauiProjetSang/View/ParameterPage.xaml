@@ -6,7 +6,7 @@
              xmlns:viewmodel="clr-namespace:MauiProjetSang.ViewModel"
              x:DataType="viewmodel:ParameterViewModel"
              Shell.BackgroundColor="#ec1b23"
-             Title="ParameterPage">
+             Title="Parametres">
     <VerticalStackLayout Spacing="10" Margin="10">
 
         <Frame HasShadow="True" BorderColor="#ec1b23">

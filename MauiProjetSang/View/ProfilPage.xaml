@@ -5,7 +5,7 @@
              xmlns:viewmodel="clr-namespace:MauiProjetSang.ViewModel"
              x:DataType="viewmodel:ProfilViewModel"
              x:Class="MauiProjetSang.View.ProfilPage"
-             Title="ProfilPage">
+             Title="Profil">
     <VerticalStackLayout>
         <RefreshView Command="{Binding ProfilCommand}"
                      IsRefreshing="{Binding IsRefreshing}">

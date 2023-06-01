@@ -6,7 +6,7 @@
              xmlns:viewmodel="clr-namespace:MauiProjetSang.ViewModel"
              x:DataType="viewmodel:StartViewModel"
              Shell.BackgroundColor="#ec1b23"
-             Title="StartPage">
+             Title="Accueil">
     <StackLayout>
         <Grid 
             RowDefinitions="Auto,Auto"
@@ -14,15 +14,16 @@
             ColumnSpacing="10" 
             RowSpacing="10">
             <VerticalStackLayout
+                 Padding="5"
                 Spacing="5">
                 <ImageButton
-                    Source="hopitals"
+                    Source="hospi"
                     HeightRequest="90"
                     CornerRadius="10"
                     Command="{Binding CardTapCommand}"
                     CommandParameter="1"
-                    BackgroundColor="#ec1b23"
-                    Padding="11"/>
+                    
+                   />
                 <Label 
                     Text="Les centres à proximiter" 
                     TextColor="Black" 
@@ -34,13 +35,13 @@
                 Grid.Column="1"
                 Spacing="5">
                 <ImageButton
-                    Source="new"
+                    Source="flashinfo"
                     HeightRequest="90"
                     CornerRadius="10"
                     Command="{Binding CardTapCommand}"
                     CommandParameter="2"
-                    BackgroundColor="#ec1b23"
-                    Padding="11"/>
+                    BackgroundColor="White"
+                    />
                 <Label 
                     Text="Articles sur les dons de sang" 
                     TextColor="Black" 
@@ -54,11 +55,12 @@
                 <ImageButton
                     Source="rendezvous"
                     HeightRequest="90"
+                    WidthRequest="100"
                     CornerRadius="10"
                     Command="{Binding CardTapCommand}"
                     CommandParameter="3"
-                    BackgroundColor="#ec1b23"
-                    Padding="11"/>
+                    BackgroundColor="White"
+                    />
                 <Label 
                     Text="Mes RDV" 
                     TextColor="Black" 
@@ -70,13 +72,14 @@
                 Grid.Row="1"
                 Spacing="5">
                 <ImageButton
+                    
                     Source="faq"
                     HeightRequest="90"
                     CornerRadius="10"
                     Command="{Binding CardTapCommand}"
                     CommandParameter="4"
-                    BackgroundColor="#ec1b23"
-                    Padding="11"/>
+                    BackgroundColor="White"
+                    />
                 <Label 
                     Text="FAQ" 
                     TextColor="Black" 
@@ -95,7 +98,7 @@
                     Command="{Binding CardTapCommand}"
                     CommandParameter="5"
                     BackgroundColor="#ec1b23"
-                    Padding="11"/>
+                    />
                 <Label 
                     Text="Test de Predon" 
                     TextColor="Black" 
@@ -114,7 +117,7 @@
                     Command="{Binding CardTapCommand}"
                     CommandParameter="6"
                     BackgroundColor="#ec1b23"
-                    Padding="11"/>
+                    />
                 <Label 
                     Text="Editer mon profil" 
                     TextColor="Black" 
@@ -130,7 +133,7 @@
             FontAttributes="Bold"
             Padding="10"
             FontSize="12"
-            Margin="0,20"
+            Margin="0,30"
             BackgroundColor="#ec1b23" 
             HorizontalTextAlignment="Center"/>
         <Label 
@@ -144,10 +147,10 @@
             TextColor="White" 
             CornerRadius="50" 
             FontSize="15"
-            Margin="0,10"
+            Margin="0,20"
             FontAttributes="Bold"
             WidthRequest="280" 
-            HeightRequest="80" 
+            HeightRequest="60" 
             Command="{Binding CenterCommand}"
             BackgroundColor="#ec1b23"/>
     </StackLayout>

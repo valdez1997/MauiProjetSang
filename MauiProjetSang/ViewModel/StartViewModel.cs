@@ -38,7 +38,7 @@ public partial class StartViewModel
                 route = nameof(FaqPage);
                 break;
             case "5":
-                route = nameof(TestdePredonPage);
+                route = nameof(Rdv2Page);
                 break;
             case "6":
                 route = nameof(EditProfilPage);

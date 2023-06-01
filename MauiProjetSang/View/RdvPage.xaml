@@ -3,11 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiProjetSang.View.RdvPage"
              Shell.BackgroundColor="#ec1b23"
-             Title="RdvPage">
+             Title="Liste des Rendez-vous">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <CollectionView>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                    <Frame HasShadow="True" Margin="8">
+                        <VerticalStackLayout>
+                            <HorizontalStackLayout Spacing="180" >
+                                <Label Text="Lundi"  FontAttributes="Bold" FontSize="20"   TextColor="#ec1b23"/>
+                                <Label Text="Status"  FontAttributes="Bold" FontSize="20"  TextColor="#ec1b23"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Spacing="100">
+                                <Label Text="23-05-2023 " FontAttributes="Bold" FontSize="20" TextColor="Black"/>
+                                <Label Text="En attente" FontAttributes="Bold" FontSize="20" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Spacing="70">
+                                <Label Text="Centre Saint Pierre " FontAttributes="Bold" FontSize="20" />
+                                <Label Text="10:00" FontAttributes="Bold" FontSize="20"/>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+        <Frame HasShadow="True" Margin="8">
+            <VerticalStackLayout>
+        <HorizontalStackLayout Spacing="180" >
+            <Label Text="Lundi"  FontAttributes="Bold" FontSize="20"   TextColor="#ec1b23"/>
+            <Label Text="Status"  FontAttributes="Bold" FontSize="20"  TextColor="#ec1b23"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="100">
+            <Label Text="23-05-2023 " FontAttributes="Bold" FontSize="20" TextColor="Black"/>
+            <Label Text="En attente" FontAttributes="Bold" FontSize="20" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="70">
+            <Label Text="Centre Saint Pierre " FontAttributes="Bold" FontSize="20" />
+            <Label Text="10:00" FontAttributes="Bold" FontSize="20"/>
+        </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
+        <Frame HasShadow="True" Margin="8">
+            <VerticalStackLayout>
+                <HorizontalStackLayout Spacing="180" >
+                    <Label Text="Mardi"  FontAttributes="Bold" FontSize="20"   TextColor="#ec1b23"/>
+                    <Label Text="Status"  FontAttributes="Bold" FontSize="20"  TextColor="#ec1b23"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="100">
+                    <Label Text="23-05-2023 " FontAttributes="Bold" FontSize="20" TextColor="Black"/>
+                    <Label Text="Effectuer" FontAttributes="Bold" FontSize="20" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="55">
+                    <Label Text="Centre Saint Lorrent " FontAttributes="Bold" FontSize="20" />
+                    <Label Text="10:00" FontAttributes="Bold" FontSize="20"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
     </VerticalStackLayout>
 </ContentPage>

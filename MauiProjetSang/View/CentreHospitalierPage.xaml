@@ -6,7 +6,7 @@
              xmlns:viewmodel="clr-namespace:MauiProjetSang.ViewModel"
              x:DataType="viewmodel:CenterHospitalierViewModel"
              Shell.BackgroundColor="#ec1b23"
-             Title="CentreHospitalierPage">
+             Title="Liste Des Hopitaux">
     <RefreshView 
                Command="{Binding GetHospitalCommand}"
                      IsRefreshing="{Binding IsRefreshing}">

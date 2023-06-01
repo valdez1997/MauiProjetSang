@@ -32,7 +32,8 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<MauiIcon Include="Resources\AppIcon\logo.png" ForegroundScale="0.65" Color="White" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\logo4.png" Color="#ec1b23" BaseSize="128,128" />
@@ -59,16 +60,20 @@
 	  <None Remove="Resources\Images\eye.png" />
 	  <None Remove="Resources\Images\faq.png" />
 	  <None Remove="Resources\Images\fermercle.png" />
+	  <None Remove="Resources\Images\flashinfo.png" />
 	  <None Remove="Resources\Images\flechebas.png" />
 	  <None Remove="Resources\Images\flechehaut.png" />
+	  <None Remove="Resources\Images\forgetpass.png" />
 	  <None Remove="Resources\Images\hopital.png" />
 	  <None Remove="Resources\Images\hopitals.png" />
+	  <None Remove="Resources\Images\hospi.png" />
+	  <None Remove="Resources\Images\hospitale.png" />
 	  <None Remove="Resources\Images\hotel.png" />
 	  <None Remove="Resources\Images\keur.png" />
 	  <None Remove="Resources\Images\logo2.png" />
 	  <None Remove="Resources\Images\logo4.png" />
-	  <None Remove="Resources\Images\new.png" />
 	  <None Remove="Resources\Images\padlock.png" />
+	  <None Remove="Resources\Images\passwords.jpg" />
 	  <None Remove="Resources\Images\rdv.png" />
 	  <None Remove="Resources\Images\rendezvous.png" />
 	  <None Remove="Resources\Images\unlock.png" />
@@ -86,6 +91,7 @@
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Syncfusion.Maui.Calendar" Version="21.2.8" />
 	</ItemGroup>
 
 	<ItemGroup>

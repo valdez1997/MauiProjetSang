@@ -44,30 +44,6 @@
                 Route="Profile" />
         </Tab>
     </FlyoutItem>
-
-    <FlyoutItem
-        Title="Mes Rendez-vous"
-        Icon="rdv.png">
-        <ShellContent
-            Route="RendezVous"
-            ContentTemplate="{DataTemplate local:RdvPage}"/>
-    </FlyoutItem>
-
-    <FlyoutItem
-        Title="Tests de pre-dons"
-        Icon="eye">
-        <ShellContent
-            Route="Predons"
-            ContentTemplate="{DataTemplate local:TestdePredonPage}"/>
-    </FlyoutItem>
-
-    <FlyoutItem
-        Title="Modifier le mot de passe"
-        Icon="cle">
-        <ShellContent
-            Route="EditPassword"
-            ContentTemplate="{DataTemplate local:EditPasswordPage}"/>
-    </FlyoutItem>
     <FlyoutItem
         Title="Parametres"
         Icon="cle">
